@@ -8,7 +8,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-API_KEY = os.getenv('API_KEY')
+API_KEY = st.secrets["API_KEY"]
 print(API_KEY)
 st.write("""
 # News Classifier
