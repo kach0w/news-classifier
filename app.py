@@ -47,7 +47,7 @@ for i in counts:
      
     string = f"""
         <div style="display: flex; justify-content: space-between;">
-            <div style="width: 48%; background-color: #f0f0f0; padding: 10px;">
+            <div style="width: 48%; background-color: white; padding: 10px;">
                 <img style="border-radius: 8px;" width="350px" src="{res[i]["urlToImage"]}">
             </div>
             <div style="line-height: 0px; color: black; text-decoration: none; width: 48%; background-color: #f0f0f0; padding: 10px;">
