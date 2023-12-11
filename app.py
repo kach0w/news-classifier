@@ -29,7 +29,7 @@ for q in range(len(res)):
         counts.append(q)
         # print(res[q]["urlToImage"]);
         # print(res[q]["title"][:5])
-        # print("-----------------------------------")
+        # print( "-----------------------------------")
         count+=1
     title = ""
     for i in range(len(res[q]["title"].split("-")) - 1):
