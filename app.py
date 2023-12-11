@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 API_KEY = st.secrets["API_KEY"]
-print(API_KEY)
 st.write("""
 # News Classifier
 Using a Multinomial Naive Bayes Model to Classify News Headlines
@@ -54,9 +53,9 @@ for i in counts:
             <div style="line-height: 0px; color: black; text-decoration: none; width: 48%; background-color: #f0f0f0; padding: 10px;">
                 <h5><b><a href={res[i]["url"]}>{title.replace('"', '').replace("'", "")}</a></b></h5>
                 <br>
-                <h6>{res[i]["source"]["name"]} | {local_time_str}</h6>
-                <br>
-                <i style="color:red;">{pred[i]}</i>
+                <h6 style="margin-bottom: 10px;">{res[i]["source"]["name"]} | {local_time_str}</h6>
+                <br><br>
+                <i style="margin-top: 4px; background-color:red; color: white; padding: 5px; border-radius:10px; font-weight: 900;">{pred[i]}</i>
             </div>
         </div>
     """
