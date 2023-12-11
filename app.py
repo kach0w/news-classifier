@@ -45,7 +45,7 @@ for i in counts:
     title = ""
     for q in range(len(res[i]["title"].split("-")) - 1):
         title +=  " " + res[i]["title"].split("-")[q]
-    
+     
     string = f"""
         <a href={res[i]["url"]}>
             <div style="display: flex; justify-content: space-between;">
