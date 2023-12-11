@@ -47,20 +47,18 @@ for i in counts:
         title +=  " " + res[i]["title"].split("-")[q]
      
     string = f"""
-        <a href={res[i]["url"]}>
-            <div style="display: flex; justify-content: space-between;">
-                <div style="width: 48%; background-color: #f0f0f0; padding: 10px;">
-                    <img style="border-radius: 8px;" width="350px" src={res[i]["urlToImage"]}>
-                </div>
-                <div style="line-height: 0px; color: black; text-decoration: none; width: 48%; background-color: #f0f0f0; padding: 10px;">
-                    <h5><b><a href={res[i]["url"]}>{title.replace('"', '').replace("'", "")}</a></b></h5>
-                    <br>
-                    <h6>{res[i]["source"]["name"]} | {local_time_str}</h6>
-                    <br>
-                    <i style="color:red;">{pred[i]}</i>
-                </div>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 48%; background-color: #f0f0f0; padding: 10px;">
+                <img style="border-radius: 8px;" width="350px" src="{res[i]["urlToImage"]}">
             </div>
-        </a>
+            <div style="line-height: 0px; color: black; text-decoration: none; width: 48%; background-color: #f0f0f0; padding: 10px;">
+                <h5><b><a href={res[i]["url"]}>{title.replace('"', '').replace("'", "")}</a></b></h5>
+                <br>
+                <h6>{res[i]["source"]["name"]} | {local_time_str}</h6>
+                <br>
+                <i style="color:red;">{pred[i]}</i>
+            </div>
+        </div>
     """
     st.write(string, unsafe_allow_html=True)
 # print(pred)
